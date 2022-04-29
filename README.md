@@ -1,16 +1,16 @@
-# What is NYTHRON?
+# What is nyhtron?
 
-nythron is a json based database solution designed to work on low-level hardware.
-nythron works with basic identifiers and creates an intiutive experience, manage multiple databases in one go using one module and as simply as declaring a variable.
+nyhtron is a json based database solution designed to work on low-level hardware.
+nyhtron works with basic identifiers and creates an intiutive experience, manage multiple databases in one go using one module and as simply as declaring a variable.
 
 
 # **Initilization**
 
 
-well, first install nythron running; `npm i nythron` 
+well, first install nyhtron running; `npm i nyhtron` 
 then head over to your project and define the module;
 ```js
-const { Database } = require('nythron')
+const { Database } = require('nyhtron')
 ```
 after that you can create a new database;
 ```js
