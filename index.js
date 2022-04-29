@@ -17,12 +17,12 @@ class Database {
   }
 
   setBackup(filePath) {
-    if (!filePath) throw Error("[database issue!] a .json file must be mentioned for backups"); //err msg, tr/s4½
+    if (!filePath) throw Error("[database issue!] a .json file must be mentioned for backups");
     if (extension(filePath) !== "json") throw Error("[database issue!] the backup file must end with .json");
     if (!filePath.includes('./')) filePath = './' + filePath
     backup = filePath;
     try { load(backup); } catch { write(backup, {}); }
-    return; //æ@€al-discord.gg/javascript
+    return; 
   }
   loadBackup() {
     if (backup === undefined) throw Error("[database issue!] can't find a backup || a file to load");
@@ -46,7 +46,7 @@ class Database {
 	write(this.file, fileData);
     Backupadd(fileData);
     return;
-  } //€€₺€ißæ err, set for ❤
+  } 
   remove(data) {
     if(!data) throw Error("[database issue!] no value to remove")
     let fileData = load(this.file)
@@ -99,7 +99,7 @@ class Database {
   }
 
 
- //made with ❤ by pythonic
+
   subtract(data, value) {
     if (!data) throw Error("[database issue!] No data to subtract");
     if (!value) throw Error("[database issue!] No value to subtract");
@@ -114,7 +114,6 @@ class Database {
   }
 
 
-                   //🪐 this is a nice planet.
   deleteEach(data) {
     if (!data) throw Error("[database issue!] No data to deleteEach")
     let fileData = load(this.file)
@@ -128,7 +127,6 @@ class Database {
   }
 
 
- // 🛒 marketede giderim ben sanane
   push(array, value) {
     if (!array) throw Error("[database issue!] No array to push")
     if (!value) throw Error("[database issue!] No value to push to the array")
@@ -143,7 +141,6 @@ class Database {
   }
 
 
- //db.map shall b€ inclU€d for v2.
 
   delete(array, index) {
     if (!array) throw Error("[database issue!] No array to index/value delete")
@@ -164,7 +161,6 @@ class Database {
 
 
 
- //<html> forKey: "all-destroy" </html>
   deleteKey(object, key) {
     if (!object) throw Error("[database issue!] No object to key delete");
     if (!key) throw Error("[database issue!] No key to delete from the object");
@@ -177,7 +173,6 @@ class Database {
   }
 
 
-//Code obsidestructor ⚔
 
   has(data) {
     if (!data) throw Error("[database issue!] No data to has function");
@@ -187,16 +182,6 @@ class Database {
   }
 
 
-//do not, delete the code below - - - discor
-//--------------------------------\\
-/* 
-Welcome, hope you are enjoying this package
-this package was created for discord.gg/javascript
-and for anyone's use. its open source and free for use
-please credit us.
-❤
-*/
-//--------------------------------\\
 
   clear() {
     write(this.file, {});
